@@ -2,7 +2,7 @@ import "@/styles/globals.css";
 import Link from "next/link";
 import { ThemeProvider } from "@/context/ThemeProvider";
 import ThemeToggle from "@/components/ThemeToggle";
-
+import Head from "next/head";
 function Layout({ children }) {
   return (
     <>
@@ -21,10 +21,16 @@ function Layout({ children }) {
 
 export default function App({ Component, pageProps }) {
   return (
-    <ThemeProvider>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </ThemeProvider>
+    <>
+      <Head>
+        <title>HAYOON</title>
+        <link rel="icon" href="/images/winter.png" />
+      </Head>
+      <ThemeProvider>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ThemeProvider>
+    </>
   );
 }
