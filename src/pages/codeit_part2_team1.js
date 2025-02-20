@@ -11,7 +11,7 @@ const Title = styled.h1`
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  color: #333;
+  color: var(--foreground);
 `;
 
 const PhotoGrid = styled.div`
@@ -21,11 +21,12 @@ const PhotoGrid = styled.div`
 `;
 
 const PhotoCard = styled.div`
-  background: white;
+  background: var(--background);
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease;
+  border: 1px solid var(--foreground);
 
   &:hover {
     transform: translateY(-5px);
@@ -44,10 +45,12 @@ const PhotoCaption = styled.div`
   h3 {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
+    color: var(--foreground);
   }
 
   p {
-    color: #666;
+    color: var(--foreground);
+    opacity: 0.8;
     font-size: 0.9rem;
   }
 `;
