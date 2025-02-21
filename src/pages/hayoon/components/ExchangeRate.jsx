@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import styles from "./Components.module.css";
 
 export default function ExchangeRate() {
   const [rate, setRate] = useState(null);
@@ -28,22 +29,22 @@ export default function ExchangeRate() {
   if (loading) return <p>Loading...</p>;
 
   return (
-    <div className="londonInfoItem">
+    <div className={styles.londonInfoItem}>
       <h4>Exchange Rate</h4>
-      <div className="exchange-rate-container">
-        <div className="currency-box">
-          <span className="currency-amount">1</span>
-          <span className="currency-code">GBP</span>
+      <div className={styles.exchangeRateContainer}>
+        <div className={styles.currencyBox}>
+          <span className={styles.currencyAmount}>1</span>
+          <span className={styles.currencyCode}>GBP</span>
         </div>
-        <div className="exchange-rate-equals">=</div>
-        <div className="currency-box">
-          <span className="currency-amount">
+        <div className={styles.exchangeRateEquals}>=</div>
+        <div className={styles.currencyBox}>
+          <span className={styles.currencyAmount}>
             {rate?.toLocaleString("ko-KR", { maximumFractionDigits: 2 })}
           </span>
-          <span className="currency-code">KRW</span>
+          <span className={styles.currencyCode}>KRW</span>
         </div>
       </div>
-      <p className="update-time">Updated every hour</p>
+      <p className={styles.updateTime}>Updated every hour</p>
     </div>
   );
 }

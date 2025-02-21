@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import styles from "./Components.module.css";
 
 export default function DevNews() {
   const [news, setNews] = useState(null);
@@ -26,7 +27,7 @@ export default function DevNews() {
   if (loading) return <p>Loading...</p>;
 
   return (
-    <div className="devInfoItem">
+    <div className={styles.devInfoItem}>
       <h4>
         <a href="https://dev.to" target="_blank" rel="noopener noreferrer">
           <img
@@ -38,22 +39,22 @@ export default function DevNews() {
         <br />
         News
       </h4>
-      <div className="newsList">
+      <div className={styles.newsList}>
         {news?.map((article) => (
           <a
             key={article.id}
             href={article.url}
-            className="newsItem"
+            className={styles.newsItem}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <div className="newsContent">
-              <h5 className="newsTitle">{article.title}</h5>
-              <p className="newsMetadata">
-                <span className="newsAuthor">
+            <div className={styles.newsContent}>
+              <h5 className={styles.newsTitle}>{article.title}</h5>
+              <p className={styles.newsMetadata}>
+                <span className={styles.newsAuthor}>
                   posted by {article.user.name}
                 </span>
-                <span className="newsReactions">
+                <span className={styles.newsReactions}>
                   👍🏻 {article.public_reactions_count}
                 </span>
               </p>
@@ -61,7 +62,7 @@ export default function DevNews() {
           </a>
         ))}
       </div>
-      <p className="update-time">Updated every hour</p>
+      <p className={styles.updateTime}>Updated every hour</p>
     </div>
   );
 }

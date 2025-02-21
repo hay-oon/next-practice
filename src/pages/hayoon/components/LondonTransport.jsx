@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import styles from "./Components.module.css";
 
 export default function LondonTransport() {
   const [tubeStatus, setTubeStatus] = useState(null);
@@ -7,14 +8,14 @@ export default function LondonTransport() {
 
   const getStatusColor = (status) => {
     if (status.toLowerCase().includes("good service")) {
-      return "status-good";
+      return styles.statusGood;
     } else if (
       status.toLowerCase().includes("minor") ||
       status.toLowerCase().includes("reduced")
     ) {
-      return "status-minor";
+      return styles.statusMinor;
     }
-    return "status-severe";
+    return styles.statusSevere;
   };
 
   // 지하철 상태 가져오기
@@ -51,24 +52,24 @@ export default function LondonTransport() {
   if (loading) return <p>Loading...</p>;
 
   return (
-    <div className="londonInfoItem">
+    <div className={styles.londonInfoItem}>
       <h4>London Transport Status</h4>
-      <div className="tubeStatusList">
+      <div className={styles.tubeStatusList}>
         {tubeStatus?.map((line) => (
           <a
             href={`https://tfl.gov.uk/tube-dlr-overground/status/#line-lul-${line.id}`}
             key={line.id}
-            className="tubeLineStatus"
+            className={styles.tubeLineStatus}
             target="_blank"
             rel="noopener noreferrer"
           >
             <div
-              className={`statusIndicator ${getStatusColor(
+              className={`${styles.statusIndicator} ${getStatusColor(
                 line.lineStatuses[0].statusSeverityDescription
               )}`}
             />
             <div>
-              <p className="tubeLineName">
+              <p className={styles.tubeLineName}>
                 {line.name} Line :{" "}
                 {line.lineStatuses[0].statusSeverityDescription}
               </p>
@@ -76,10 +77,9 @@ export default function LondonTransport() {
           </a>
         ))}
       </div>
-      <div className="timeDisplay">
+      <div className={styles.timeDisplay}>
         London Time:{" "}
         {currentTime.toLocaleTimeString("en-GB", {
-          // new Date() -> currentTime : 매 초마다 변경상태 반영하기위해 state 변경
           timeZone: "Europe/London",
           hour: "2-digit",
           minute: "2-digit",
@@ -87,7 +87,7 @@ export default function LondonTransport() {
           hour12: true,
         })}
       </div>
-      <p className="update-time">Updated every 5 minutes</p>
+      <p className={styles.updateTime}>Updated every 5 minutes</p>
     </div>
   );
 }

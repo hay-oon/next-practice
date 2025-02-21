@@ -3,12 +3,6 @@ import Link from "next/link";
 import { ThemeProvider } from "@/context/ThemeProvider";
 import ThemeToggle from "@/components/ThemeToggle";
 import Head from "next/head";
-import { Noto_Sans_KR } from "@next/font/google";
-
-const notoSansKR = Noto_Sans_KR({
-  weight: ["400", "700"],
-  subsets: [],
-});
 
 function Layout({ children }) {
   return (

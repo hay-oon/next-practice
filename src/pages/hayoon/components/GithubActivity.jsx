@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import styles from "./Components.module.css";
 
 export default function GithubActivity() {
   const [activity, setActivity] = useState(null);
@@ -41,9 +42,9 @@ export default function GithubActivity() {
   if (loading) return <p>Loading...</p>;
 
   return (
-    <div className="devInfoItem">
+    <div className={styles.devInfoItem}>
       <h4>Github Activity</h4>
-      <p className="interSectionSubtitle">
+      <p className={styles.interSectionSubtitle}>
         Username : {activity?.actor?.login}
         <br />
         Action : {getActivityMessage(activity)}
@@ -52,7 +53,7 @@ export default function GithubActivity() {
       </p>
       <a
         href="https://github.com/hay-oon"
-        className="interSectionLink"
+        className={styles.interSectionLink}
         target="_blank"
         rel="noopener noreferrer"
       >

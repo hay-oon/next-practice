@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import styles from "./Components.module.css";
 
 export default function LondonWeather() {
   const [weather, setWeather] = useState(null);
@@ -32,22 +33,24 @@ export default function LondonWeather() {
   };
 
   return (
-    <div className="londonInfoItem">
+    <div className={styles.londonInfoItem}>
       <h4>Weather in London</h4>
-      <div className="weatherContainer">
-        <div className="weatherInfo">
+      <div className={styles.weatherContainer}>
+        <div className={styles.weatherInfo}>
           <img
             src={getWeatherIcon(weather?.weather[0]?.icon)}
             alt={weather?.weather[0]?.description}
-            className="weatherIcon"
+            className={styles.weatherIcon}
           />
-          <span className="weatherTemp">
+          <span className={styles.weatherTemp}>
             {Math.round(weather?.main?.temp)}°C
           </span>
         </div>
-        <span className="weatherDesc">{weather?.weather[0]?.description}</span>
+        <span className={styles.weatherDesc}>
+          {weather?.weather[0]?.description}
+        </span>
       </div>
-      <p className="update-time">Updated every 5 minutes</p>
+      <p className={styles.updateTime}>Updated every 5 minutes</p>
     </div>
   );
 }

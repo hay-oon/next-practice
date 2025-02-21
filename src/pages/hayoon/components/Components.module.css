@@ -1,0 +1,285 @@
+/* 공통 스타일 */
+.londonInfoContainer,
+.devInfoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.londonInfoItem,
+.devInfoItem {
+  border: 1px solid #e5e5e7;
+  padding: 16px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.londonInfoItem:hover,
+.devInfoItem:hover {
+  background-color: #e5e5e7;
+}
+
+.londonInfoItem h4,
+.devInfoItem h4 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* 뉴스 관련 스타일 */
+.newsList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.newsItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background-color: #f5f5f7;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.newsItem:hover {
+  background-color: #e5e5e7;
+  transform: translateY(-2px);
+}
+
+.newsContent {
+  flex: 1;
+}
+
+.newsTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 8px 0;
+  line-height: 1.4;
+}
+
+.newsMetadata {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0;
+  font-size: 13px;
+  color: #666;
+}
+
+.newsReactions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* 날씨 관련 스타일 */
+.weatherContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.weatherInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.weatherIcon {
+  width: 50px;
+  height: 50px;
+}
+
+.weatherTemp {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+
+.weatherDesc {
+  color: #666;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+/* 환율 관련 스타일 */
+.exchangeRateContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 12px 0;
+}
+
+.currencyBox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #f5f5f7;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.currencyAmount {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+
+.currencyCode {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.exchangeRateEquals {
+  font-size: 20px;
+  color: #666;
+}
+
+/* 지하철 상태 관련 스타일 */
+.tubeStatusList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  width: 100%;
+  margin: 12px 0;
+}
+
+.tubeLineStatus {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: #f5f5f7;
+  border-radius: 8px;
+  gap: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tubeLineStatus:hover {
+  background-color: #e5e5e7;
+  transform: translateY(-2px);
+}
+
+.tubeLineName {
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  font-size: 14px;
+}
+
+.statusIndicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+
+.statusGood {
+  background-color: #2ecc71;
+}
+
+.statusMinor {
+  background-color: #f1c40f;
+}
+
+.statusSevere {
+  background-color: #e74c3c;
+}
+
+.timeDisplay {
+  font-size: 16px;
+  color: #999;
+  margin: 0;
+}
+
+.updateTime {
+  font-size: 12px;
+  color: #999;
+  margin: 0;
+}
+
+/* 모바일 반응형 스타일 */
+@media screen and (max-width: 768px) {
+  .weatherIcon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .weatherTemp {
+    font-size: 20px;
+  }
+
+  .currencyAmount {
+    font-size: 20px;
+  }
+
+  .currencyCode {
+    font-size: 12px;
+  }
+
+  .exchangeRateEquals {
+    font-size: 16px;
+  }
+
+  .currencyBox {
+    padding: 6px 12px;
+  }
+
+  .tubeStatusList {
+    grid-template-columns: 1fr;
+  }
+
+  .newsTitle {
+    font-size: 14px;
+  }
+
+  .newsMetadata {
+    font-size: 12px;
+  }
+}
+
+/* 기존 스타일에 추가 */
+
+.interSectionSubtitle {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+  max-width: 400px;
+}
+
+.interSectionLink {
+  color: #0066cc;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.interSectionLink:hover {
+  text-decoration: underline;
+}
+
+/* 모바일 반응형 스타일에 추가 */
+@media screen and (max-width: 768px) {
+  .interSectionSubtitle {
+    font-size: 14px;
+  }
+}

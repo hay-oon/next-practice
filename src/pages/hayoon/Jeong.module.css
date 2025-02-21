@@ -1,0 +1,321 @@
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.featuredSection {
+  padding: 48px 0;
+}
+
+.nameLogoWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.logoWrapper {
+  flex-shrink: 0;
+}
+
+.logoImage {
+  width: 240px;
+  height: 240px;
+  object-fit: contain;
+}
+
+.nameWrapper {
+  text-align: center;
+}
+
+.nameLine {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.nameChar {
+  font-size: 64px;
+  font-weight: 700;
+}
+
+.black {
+  color: #3d3b40;
+}
+
+.navy {
+  color: #687980;
+}
+
+.gray {
+  color: #666;
+}
+
+.pastelBlue {
+  color: #779ecb;
+}
+
+.featuredTitle {
+  font-size: 48px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 8px;
+}
+
+.featuredSubtitle {
+  text-align: center;
+  color: #666;
+  font-size: 18px;
+}
+
+.featuredContent {
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.featuredContent p {
+  margin: 16px 0;
+}
+
+.featuredGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.featuredCard {
+  display: flex;
+  gap: 32px;
+  padding: 32px;
+  background: #fff;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  border: 1px solid #e5e5e5;
+}
+
+.grayBackground {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: #f5f5f7;
+  padding: 16px 0 48px 0;
+  width: 100%;
+}
+
+.graySectionWrapper {
+  display: flex;
+  gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: calc(100% - 32px);
+  padding: 0 16px;
+}
+
+.graySectionCard {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #fff;
+  flex: 1;
+  margin: 0 auto;
+  padding: 32px;
+  border-radius: 12px;
+  max-width: 780px;
+  width: calc(100% - 32px);
+}
+
+.graySectionCard.wideCard {
+  max-width: 1200px;
+  width: calc(100% - 32px);
+  margin: 0 auto;
+  padding: 32px;
+}
+
+.graySectionTitle {
+  font-size: 32px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.graySectionSubtitle {
+  font-size: 16px;
+  color: #666;
+}
+
+.interSection {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.interSectionInner {
+  display: flex;
+  width: calc(100% - 32px);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.interSectionLeft,
+.interSectionRight {
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: #fff;
+}
+
+.interSectionLeft {
+  flex: 2;
+  border-right: 12px solid #f5f5f7;
+}
+
+.interSectionRight {
+  flex: 1;
+  padding: 32px;
+}
+
+.interSectionTitle {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.interSectionSubtitle {
+  font-size: 16px;
+  color: #666;
+  margin: 8px 0;
+}
+
+.interSectionLink {
+  color: #0066cc;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.interSectionLink:hover {
+  color: #004c99;
+}
+
+.flexGridWrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.flexGridCard {
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.flexGridCardTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.flexGridCardSubtitle {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 16px 0;
+}
+
+.flexGridCardImage {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flexGridCardImage img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.contactSection {
+  text-align: center;
+  padding: 48px 0;
+}
+
+.contactSection h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0 0 24px 0;
+}
+
+.contactSection ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.contactSection a {
+  color: #0066cc;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.contactSection a:hover {
+  color: #004c99;
+}
+
+/* 모바일 반응형 스타일 */
+@media screen and (max-width: 768px) {
+  .nameLogoWrapper {
+    flex-direction: column;
+    gap: 24px;
+    padding: 0 16px;
+  }
+
+  .logoWrapper {
+    order: -1;
+  }
+
+  .logoImage {
+    width: 160px;
+    height: 160px;
+  }
+
+  .nameChar {
+    font-size: 36px;
+  }
+
+  .featuredSubtitle {
+    font-size: 16px;
+    margin: 8px 0;
+  }
+
+  .graySectionWrapper {
+    flex-direction: column;
+  }
+
+  .interSectionInner {
+    flex-direction: column;
+  }
+
+  .interSectionLeft {
+    border-right: none;
+    border-bottom: 12px solid #f5f5f7;
+  }
+}
