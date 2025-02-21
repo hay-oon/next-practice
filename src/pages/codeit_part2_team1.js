@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import Head from "next/head";
-
+import Link from "next/link";
 const AlbumContainer = styled.div`
   padding: 2rem;
   max-width: 1200px;
@@ -12,6 +12,7 @@ const Title = styled.h1`
   font-size: 2.5rem;
   margin-bottom: 2rem;
   color: var(--foreground);
+  font-family: "Noto Sans KR", sans-serif;
 `;
 
 const PhotoGrid = styled.div`
@@ -41,6 +42,7 @@ const Photo = styled.img`
 
 const PhotoCaption = styled.div`
   padding: 1rem;
+  font-family: "Noto Sans KR", sans-serif;
 
   h3 {
     font-size: 1.2rem;
@@ -55,6 +57,41 @@ const PhotoCaption = styled.div`
   }
 `;
 
+const MessageContainer = styled.div`
+  text-align: center;
+  margin-top: 2rem;
+  padding: 2rem;
+
+  h1 {
+    font-size: 2.5rem;
+    color: var(--foreground);
+    margin-bottom: 1rem;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    color: var(--foreground);
+    margin: 1rem 0;
+    line-height: 1.6;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+`;
+
+const DiscordLink = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+
+  img {
+    transition: transform 0.3s ease;
+    &:hover {
+      transform: scale(1.05);
+    }
+    animation: bounce 2s linear infinite;
+  }
+`;
+
 const Team1 = () => {
   const memories = [
     {
@@ -66,7 +103,7 @@ const Team1 = () => {
     {
       id: 2,
       image: "/images/team14.png",
-      title: "모닥불 앞에서 모닥모닥",
+      title: "힐링 캠프파이어",
       description: "따뜻한 모닥불 앞에서 우애를 나누며",
     },
     {
@@ -99,6 +136,10 @@ const Team1 = () => {
     <>
       <Head>
         <title>1팀 추억앨범 - HAYOON</title>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       <AlbumContainer>
         <Title>코드잇 스프린트 파트2 1팀 추억앨범</Title>
@@ -114,14 +155,19 @@ const Team1 = () => {
           ))}
         </PhotoGrid>
       </AlbumContainer>
-      <div style={{ textAlign: "center", marginTop: "2rem", fontSize: "2rem" }}>
+      <MessageContainer>
+        <DiscordLink>
+          <Link href="https://discord.gg/WpjFRxHY">
+            <img src="/images/discord.png" alt="CLICK HERE IMG" width={300} />
+          </Link>
+        </DiscordLink>
         <h1>수고하셨습니다!</h1>
         <h2>
-          멋진 팀원들을 만나서 즐겁고 성공적으로 프로젝트를 진행할 수
+          멋진 팀원들을 만나서 성공적으로 즐겁게 프로젝트를 진행할 수
           있었습니다.
         </h2>
-        <h2>🙏🏻ALL THE BEST🙏🏻</h2>
-      </div>
+        <h2>🙏🏻 ALL THE BEST 🙏🏻</h2>
+      </MessageContainer>
     </>
   );
 };
